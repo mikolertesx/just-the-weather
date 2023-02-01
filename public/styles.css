@@ -6,7 +6,7 @@ body {
 /* def gonna wanna change this, i just forgor how */
 /* thats how much i have deteriorated */
 /* also commenting as much as i want cuz idk */
-.spacer-1 {
+.spacer {
   height: 42px;
 }
 
@@ -31,10 +31,6 @@ body {
 
 .clock {
   place-self: center;
-}
-
-.spacer-2 {
-  height: 42px;
 }
 
 /* they are gonna be side by side and */
@@ -66,10 +62,6 @@ body {
 
 .city {
   padding: 5px;
-}
-
-.spacer-3 {
-  height: 42px;
 }
 
 .buttons {
