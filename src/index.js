@@ -1,5 +1,5 @@
 import getLocation from './utils/getLocation';
-
+import getBrackgroundColor from './utils/getBackgroundColor';
 // MAIN APP
 
 getLocation();
@@ -12,22 +12,6 @@ getLocation();
 // times better
 
 const userTime = new Date().getHours();
-
-if (userTime >= 5 && userTime <= 7) {
-    console.log('This is sunrise')
-    document.body.style.backgroundColor = '#FFDB00'
-}
-else if (userTime >= 8 && userTime <= 15) {
-    console.log('this is broad daylight')
-    document.body.style.backgroundColor = '#fff'
-}
-else if (userTime >= 16 && userTime <= 18) {
-    console.log('This is sunset')
-    document.body.style.backgroundColor = '#FE8714'
-}
-else if (userTime >= 19 && userTime <= 4) {
-    console.log('its nighttime')
-    document.body.style.backgroundColor = '#27445C'
-}
+document.body.style.backgroundColor = getBrackgroundColor(userTime);
 
 console.log(userTime)
