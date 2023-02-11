@@ -3,6 +3,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 
 const isProduction = process.env.NODE_ENV == "production";
 
@@ -10,6 +11,11 @@ const stylesHandler = MiniCssExtractPlugin.loader;
 
 const config = {
   entry: "./src/index.js",
+  resolve: {
+    fallback: {
+      "fs": false,
+    },
+  },
   output: {
     path: path.resolve(__dirname, "dist"),
   },
@@ -23,6 +29,8 @@ const config = {
     }),
 
     new MiniCssExtractPlugin(),
+
+    new NodePolyfillPlugin(),
 
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
